@@ -1,23 +1,18 @@
-import { useRef } from 'react';
+import React, { useState } from 'react';
 import html2canvas from 'html2canvas';
 import { DownloadOutlined, HeartFilled } from '@ant-design/icons';
 
 export default function SaveButton() {
+  const [imageUrl, setImageUrl] = useState(null);
+
   const handleSaveClick = () => {
     const dollFrame = document.querySelector('.doll-frame');
 
-    html2canvas(dollFrame, { useCORS: true }) 
+    html2canvas(dollFrame, { useCORS: true }) // Handle cross-origin images
       .then((canvas) => {
         canvas.toBlob((blob) => {
           const url = URL.createObjectURL(blob);
-          const downloadLink = document.createElement('a');
-          downloadLink.href = url;
-          downloadLink.download = 'doll_creation.jpg';
-          
-          document.body.appendChild(downloadLink);
-          downloadLink.click();
-          document.body.removeChild(downloadLink);
-          URL.revokeObjectURL(url); 
+          setImageUrl(url);
         }, 'image/jpeg');
       })
       .catch((error) => {
@@ -36,6 +31,13 @@ export default function SaveButton() {
           </span>
         </div>
       </button>
+
+      {imageUrl && (
+        <div className="fullscreen-preview">
+          <img src={imageUrl} alt="Doll Preview" />
+          <p>Long-press the image to save it to your gallery.</p>
+        </div>
+      )}
     </div>
   );
 }
