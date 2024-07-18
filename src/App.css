@@ -336,24 +336,27 @@ font-size: 2vh;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(210, 210, 210, 0.777);
+  background: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 1000; /* Ensure it's above other content */
 }
 
 .fullscreen-preview img {
-
+  max-width: 90%; /* Adjust size to fit within the screen */
+  max-height: 80vh; /* Prevent image from overflowing */
   margin-bottom: 20px;
-
 }
 
 .fullscreen-preview p {
-  color: #000000;
+  color: #ffffff; /* White text for better visibility on dark background */
   font-size: 18px;
+  text-align: center; /* Center text */
+  margin: 0; /* Remove default margin */
 }
+
 @media (max-width: 421px) {
 
 

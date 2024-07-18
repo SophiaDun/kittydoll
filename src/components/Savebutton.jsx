@@ -9,6 +9,11 @@ export default function SaveButton() {
   const handleSaveClick = () => {
     const dollFrame = document.querySelector('.doll-frame');
 
+    if (!dollFrame) {
+      console.error('Doll frame not found!');
+      return;
+    }
+
     html2canvas(dollFrame, { useCORS: true }) // Handle cross-origin images
       .then((canvas) => {
         canvas.toBlob((blob) => {
@@ -28,10 +33,7 @@ export default function SaveButton() {
   };
 
   useEffect(() => {
-    // Attach event listener for clicks outside the preview
     document.addEventListener('mousedown', handleClickOutside);
-
-    // Clean up the event listener on component unmount
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -53,7 +55,7 @@ export default function SaveButton() {
         <div className="fullscreen-preview">
           <div ref={previewRef} className="preview-content">
             <img src={imageUrl} alt="Doll Preview" />
-            <p>Long-press/right-click the image to save to your doll.</p>
+            <p>Long-press/right-click the image to save to your gallery.</p>
           </div>
         </div>
       )}
