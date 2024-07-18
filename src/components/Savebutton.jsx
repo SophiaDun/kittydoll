@@ -6,24 +6,23 @@ export default function SaveButton() {
   const [imageUrl, setImageUrl] = useState(null);
   const previewRef = useRef(null);
 
-  const handleSaveClick = () => {
+  const handleSaveClick = async () => {
     const dollFrame = document.querySelector('.doll-frame');
-
+    
     if (!dollFrame) {
       console.error('Doll frame not found!');
       return;
     }
 
-    html2canvas(dollFrame, { useCORS: true }) // Handle cross-origin images
-      .then((canvas) => {
-        canvas.toBlob((blob) => {
-          const url = URL.createObjectURL(blob);
-          setImageUrl(url);
-        }, 'image/jpeg');
-      })
-      .catch((error) => {
-        console.error('Error while saving doll:', error);
-      });
+    try {
+      const canvas = await html2canvas(dollFrame, { useCORS: true });
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        setImageUrl(url);
+      }, 'image/jpeg');
+    } catch (error) {
+      console.error('Error while saving doll:', error);
+    }
   };
 
   const handleClickOutside = (event) => {
