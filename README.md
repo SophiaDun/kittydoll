@@ -1,9 +1,9 @@
+----Still in the making----
+
+- A small web-based Avatar / makeover maker.
+
+- Created with: React+vite
+
+- last updated 18.7.24
 
 
-Work in progress!
-# React + Vite
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
