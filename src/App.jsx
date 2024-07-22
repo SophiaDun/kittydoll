@@ -36,16 +36,16 @@ function App() {
 
           <div className="bg">
             <div className='doll-frame'>
-              <img className="background" src={selectedBg} alt="background" />
-              <img className="skin-image" src={selectedSkin} alt="base" />
-              <img className="eyeshadow" src={selectedEyeshadow} alt="eyeshadow" />
-              <img className="eye-image" src={selectedEye} alt="eyes" />
-              <img className="lips" src={selectedLip} alt="lip" />
-              <img className="eyebrow" src={selectedEyebrow} alt="eyebrow" />
-              <img className="blush" src={selectedBlush} alt="blush" />
-              <img className="clothes" src={selectedCloth} alt="clothes" />
-              <img className="hair" src={selectedHair} alt="hair" />
-              <img className="accessories" src={selectedAcc} alt="accessories" />
+              <img className="background" src={selectedBg} alt="background" crossOrigin="anonymous"/>
+              <img className="skin-image" src={selectedSkin} alt="base" crossOrigin="anonymous"/>
+              <img className="eyeshadow" src={selectedEyeshadow} alt="eyeshadow" crossOrigin="anonymous"/>
+              <img className="eye-image" src={selectedEye} alt="eyes" crossOrigin="anonymous"/>
+              <img className="lips" src={selectedLip} alt="lip" crossOrigin="anonymous"/>
+              <img className="eyebrow" src={selectedEyebrow} alt="eyebrow" crossOrigin="anonymous"/>
+              <img className="blush" src={selectedBlush} alt="blush" crossOrigin="anonymous"/>
+              <img className="clothes" src={selectedCloth} alt="clothes" crossOrigin="anonymous"/>
+              <img className="hair" src={selectedHair} alt="hair" crossOrigin="anonymous"/>
+              <img className="accessories" src={selectedAcc} alt="accessories" crossOrigin="anonymous"/>
             </div>
 
             <Navbar />
