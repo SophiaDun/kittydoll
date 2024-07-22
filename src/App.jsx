@@ -33,16 +33,7 @@ function App() {
 
 
 
-function preloadImages(imageUrls) {
-  imageUrls.forEach(url => {
-    const img = new Image();
-    img.src = url;
-  });
-}
 
-useEffect(() => {
-  preloadImages([selectedBg, selectedSkin, selectedEyeshadow, selectedEye, selectedLip, selectedEyebrow, selectedBlush, selectedCloth, selectedHair, selectedAcc]);
-}, []);
 
   return (
     <Router>
