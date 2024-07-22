@@ -18,7 +18,11 @@ export default function SaveButton() {
   
     try {
       requestAnimationFrame(async () => {
-        const canvas = await html2canvas(dollFrame, { useCORS: true, scale: window.devicePixelRatio });
+        const canvas = await html2canvas(dollFrame, {
+          useCORS: true,
+          scale: 2
+        });
+  
         const dataUrl = canvas.toDataURL('image/jpeg');
         console.log('Image URL:', dataUrl); 
         setImageUrl(dataUrl);
@@ -58,7 +62,7 @@ export default function SaveButton() {
       {imageUrl && (
         <div className="fullscreen-preview">
           <div ref={previewRef} className="preview-content">
-          <img src={imageUrl} alt="Doll Preview" style={{ maxWidth: '100%', maxHeight: '80vh' }} />
+          <img src={imageUrl} alt="Doll Preview" style={{ maxWidth: '100%', maxHeight: '100%' }} />
 
             <p>Long-press/right-click the image to save to your gallery.</p>
           </div>
