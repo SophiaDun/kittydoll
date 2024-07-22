@@ -18,7 +18,7 @@ export default function SaveButton() {
   
     try {
       requestAnimationFrame(async () => {
-        const canvas = await html2canvas(dollFrame, { useCORS: true, scale: 2 });
+        const canvas = await html2canvas(dollFrame, { useCORS: true, scale: window.devicePixelRatio });
         const dataUrl = canvas.toDataURL('image/jpeg');
         console.log('Image URL:', dataUrl); 
         setImageUrl(dataUrl);
@@ -28,20 +28,20 @@ export default function SaveButton() {
     }
   };
   
+
+  const handleClickOutside = (event) => {
+    if (previewRef.current && !previewRef.current.contains(event.target)) {
+      setImageUrl(null);
+    }
+  };
+
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (previewRef.current && !previewRef.current.contains(event.target)) {
-        setImageUrl(null);
-      }
-    };
-  
     document.addEventListener('pointerdown', handleClickOutside);
-    
+
     return () => {
       document.removeEventListener('pointerdown', handleClickOutside);
     };
   }, []);
-  
 
   return (
     <div>
