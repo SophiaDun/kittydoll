@@ -355,7 +355,25 @@ font-size: 2vh;
   font-size: 18px;
 }
 @media (max-width: 421px) {
+  .selection-grid{
 
+    margin-top: 1vh;
+  
+    overflow-x: scroll;
+    max-width: 100%;
+    height: 30vh;
+  }
+  .selection-row{
+    
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+  
+  
+  }
+  
 
    .eye-ul-container{
     padding-top: 1.5vh;

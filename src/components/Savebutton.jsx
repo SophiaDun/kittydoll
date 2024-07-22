@@ -16,10 +16,8 @@ export default function SaveButton() {
 
     try {
       const canvas = await html2canvas(dollFrame, { useCORS: true });
-      canvas.toBlob((blob) => {
-        const url = URL.createObjectURL(blob);
-        setImageUrl(url);
-      }, 'image/jpeg');
+      const dataUrl = canvas.toDataURL('image/jpeg');
+      setImageUrl(dataUrl);
     } catch (error) {
       console.error('Error while saving doll:', error);
     }
@@ -32,9 +30,18 @@ export default function SaveButton() {
   };
 
   useEffect(() => {
+    const handleTouchOutside = (event) => {
+      if (previewRef.current && !previewRef.current.contains(event.target)) {
+        setImageUrl(null); // Hide the preview
+      }
+    };
+
     document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleTouchOutside);
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleTouchOutside);
     };
   }, []);
 

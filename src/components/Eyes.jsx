@@ -27,23 +27,22 @@ export default function Eyes({ eyeIconsMap, eyesMap, onEyeSelected }) {
     switch (color) {
       case 'darkbrown':
         return eyesMap.darkBrownEyes;
-        case 'lightbrown':
+      case 'lightbrown':
         return eyesMap.lightBrownEyes;
-        case 'hazel':
+      case 'hazel':
         return eyesMap.hazelEyes;
-        case 'green':
-          return eyesMap.greenEyes;
-          case 'blue':
-          return eyesMap.blueEyes;
-          case 'lightblue':
-            return eyesMap.lightBlueEyes;
-            case 'lilac':
-           return eyesMap.lilacEyes;
-           case 'pink':
-            return eyesMap.pinkEyes;
-          case 'red':
+      case 'green':
+        return eyesMap.greenEyes;
+      case 'blue':
+        return eyesMap.blueEyes;
+      case 'lightblue':
+        return eyesMap.lightBlueEyes;
+      case 'lilac':
+        return eyesMap.lilacEyes;
+      case 'pink':
+        return eyesMap.pinkEyes;
+      case 'red':
         return eyesMap.redEyes;
-   
       default:
         return eyesMap.darkBrownEyes; // Default to dark brown eyes
     }
@@ -69,29 +68,22 @@ export default function Eyes({ eyeIconsMap, eyesMap, onEyeSelected }) {
         </ul>
       </nav>
       {rows.map((row, rowIndex) => (
-
-        <div className="eye-ul-container">
-        <ul className='selection-row' key={rowIndex}>
-          {row.map((eye, index) => (
-            <li key={index}>
-              <button className='selection-icon' onClick={() => handleEyeClick(eye, rowIndex * 3 + index)}>
-               
-                <img
-  className="icon"
-  src={eyeIconsMap[selectedColor][rowIndex * 3 + index]} 
-  alt={`eye-${rowIndex * 3 + index + 1}`} 
-  loading="lazy"
-/>
-
-
-
-              </button>
-            </li>
-          ))}
-        </ul>
-
+        <div className="eye-ul-container" key={`row-${rowIndex}`}>
+          <ul className='selection-row'>
+            {row.map((eye, index) => (
+              <li key={eye.id || `eye-${rowIndex * 3 + index}`}>
+                <button className='selection-icon' onClick={() => handleEyeClick(eye, rowIndex * 3 + index)}>
+                  <img
+                    className="icon"
+                    src={eyeIconsMap[selectedColor][rowIndex * 3 + index]} 
+                    alt={`eye-${rowIndex * 3 + index + 1}`} 
+                    loading="lazy"
+                  />
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
-
       ))}
     </div>
   );
