@@ -8,14 +8,14 @@ export default function SaveButton() {
 
   const handleSaveClick = async () => {
     const dollFrame = document.querySelector('.doll-frame');
-    
+
     if (!dollFrame) {
       console.error('Doll frame not found!');
       return;
     }
 
     try {
-      const canvas = await html2canvas(dollFrame, { useCORS: true });
+      const canvas = await html2canvas(dollFrame, { useCORS: true, scale: window.devicePixelRatio });
       const dataUrl = canvas.toDataURL('image/jpeg');
       setImageUrl(dataUrl);
     } catch (error) {
@@ -25,23 +25,18 @@ export default function SaveButton() {
 
   const handleClickOutside = (event) => {
     if (previewRef.current && !previewRef.current.contains(event.target)) {
-      setImageUrl(null); // Hide the preview
+      setImageUrl(null); 
     }
   };
 
   useEffect(() => {
-    const handleTouchOutside = (event) => {
-      if (previewRef.current && !previewRef.current.contains(event.target)) {
-        setImageUrl(null); // Hide the preview
-      }
-    };
 
     document.addEventListener('mousedown', handleClickOutside);
-    document.addEventListener('touchstart', handleTouchOutside);
+    document.addEventListener('touchstart', handleClickOutside);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleTouchOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
     };
   }, []);
 
@@ -58,10 +53,10 @@ export default function SaveButton() {
       </button>
 
       {imageUrl && (
-        <div className="fullscreen-preview">
-          <div ref={previewRef} className="preview-content">
-            <img src={imageUrl} alt="Doll Preview" />
-            <p>Long-press/right-click the image to save to your gallery.</p>
+        <div className="fullscreen-preview" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.8)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div ref={previewRef} className="preview-content" style={{ position: 'relative', maxWidth: '90%', maxHeight: '90%' }}>
+            <img src={imageUrl} alt="Doll Preview" style={{ maxWidth: '100%', maxHeight: '100%' }} />
+            <p style={{ color: 'white', textAlign: 'center' }}>Long-press/right-click the image to save to your gallery.</p>
           </div>
         </div>
       )}

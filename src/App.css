@@ -344,10 +344,20 @@ font-size: 2vh;
   z-index: 1000;
 }
 
-.fullscreen-preview img {
+.preview-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background: white; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  padding: 20px; 
+}
 
-  margin-bottom: 20px;
+.preview-content img {
 
+  max-height: 60vh;
+  display: block; 
 }
 
 .fullscreen-preview p {
