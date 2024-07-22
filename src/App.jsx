@@ -1,5 +1,5 @@
 import './App.css';
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Use HashRouter
 import Navbar from './components/navbar';
 import Eyes from './components/Eyes';
@@ -31,10 +31,7 @@ function App() {
   const [selectedBg, setSelectedBg] = useState(background[0]);
 
 
-
-
-
-
+  
   return (
     <Router>
       <div className="container">
@@ -56,7 +53,6 @@ function App() {
             </div>
 
             <Navbar />
-            <SaveButton />
             <Routes>
               <Route path="/" element={<Navigate to="/selection" />} />
               <Route path="/selection" element={<Selection skins={skins} onSkinSelected={setSelectedSkin} />} />
@@ -72,7 +68,7 @@ function App() {
             </Routes>
           </div>
         </div>
-       
+        <SaveButton />
 
         <footer className="footer">
           <p className='kittydoll-logo-footer'>kittysophie.art 2024</p>
