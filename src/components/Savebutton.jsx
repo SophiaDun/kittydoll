@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import html2canvas from 'html2canvas';
 import { DownloadOutlined, HeartFilled } from '@ant-design/icons';
-import '../App.css'; // Ensure you have corresponding CSS for the styles used
+import '../App.css'; 
 
 export default function SaveButton() {
+  const [imageUrl, setImageUrl] = useState(null);
+  const previewRef = useRef(null);
+
   const handleSaveClick = async () => {
     const dollFrame = document.querySelector('.doll-frame');
 
@@ -15,27 +18,41 @@ export default function SaveButton() {
     try {
       const canvas = await html2canvas(dollFrame, { useCORS: true, scale: window.devicePixelRatio });
       const dataUrl = canvas.toDataURL('image/jpeg');
-      
-      const link = document.createElement('a');
-      link.href = dataUrl;
-      link.download = 'doll.png';
-      link.click();
+      setImageUrl(dataUrl);
     } catch (error) {
       console.error('Error while saving doll:', error);
     }
   };
 
+  const handleClickOutside = (event) => {
+    if (previewRef.current && !previewRef.current.contains(event.target)) {
+      setImageUrl(null);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('pointerdown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('pointerdown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <div>
       <br />
-      <button className='save-button' onClick={handleSaveClick}>
-        <div style={{ display: 'inline-block', position: 'relative' }}>
-          <HeartFilled style={{ fontSize: '5vh', color: '#e5e5e5' }} />
-          <span style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white' }}>
-            <DownloadOutlined className='save' />
-          </span>
-        </div>
+      <button className="save-button" onClick={handleSaveClick}>
+       <h1>test</h1>
       </button>
+
+      {imageUrl && (
+        <div className="fullscreen-preview">
+          <div ref={previewRef} className="preview-content">
+            <img src={imageUrl} alt="Doll Preview" />
+            <p>Long-press/right-click the image to save to your gallery.</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
