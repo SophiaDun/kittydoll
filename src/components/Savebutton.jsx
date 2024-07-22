@@ -18,7 +18,7 @@ export default function SaveButton() {
   
     try {
       requestAnimationFrame(async () => {
-        const canvas = await html2canvas(dollFrame, { useCORS: true, scale: window.devicePixelRatio });
+        const canvas = await html2canvas(dollFrame, { useCORS: true, scale: 2});
         const dataUrl = canvas.toDataURL('image/jpeg');
         console.log('Image URL:', dataUrl); 
         setImageUrl(dataUrl);
