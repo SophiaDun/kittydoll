@@ -13,7 +13,7 @@ import SaveButton from './components/Savebutton';
 import Background from './components/Background.jsx';
 import Accessories from './components/Accessories.jsx';
 import Clothes from './components/Clothes.jsx';
-
+import kittysophie_watermark from './assets/images/tab-icons/watermark.png';
 import { skins, eyesMap, eyeIconsMap, eyeshadows, eyeshadowIcons, lips, lipIcons, hairMap, blushes, blushesIcons, eyebrows, eyebrowIcons, clothes, accessories, background } from './Images.jsx';
 
 function App() {
@@ -40,6 +40,7 @@ function App() {
 
           <div className="bg">
             <div className='doll-frame'>
+             
               <img className="background" src={selectedBg} alt="background" crossOrigin="anonymous"/>
               <img className="skin-image" src={selectedSkin} alt="base" crossOrigin="anonymous"/>
               <img className="eyeshadow" src={selectedEyeshadow} alt="eyeshadow" crossOrigin="anonymous"/>
@@ -50,6 +51,7 @@ function App() {
               <img className="clothes" src={selectedCloth} alt="clothes" crossOrigin="anonymous"/>
               <img className="hair" src={selectedHair} alt="hair" crossOrigin="anonymous"/>
               <img className="accessories" src={selectedAcc} alt="accessories" crossOrigin="anonymous"/>
+              <img className="accessories" src={kittysophie_watermark} alt="watermark"  crossOrigin="anonymous"/>
             </div>
 
             <Navbar />
