@@ -147,9 +147,9 @@ height: 100%;
 border-bottom-left-radius: 20%;
 border-bottom-right-radius: 20%;
 
-  text-decoration: none;
+text-decoration: none;
 
-  background-image: linear-gradient(to bottom, #fadbff, #ffd1ea,  #edc2d4,#e1b4cd, #f1bfd5);
+background-image: linear-gradient(to bottom, #fadbff, #ffd1ea,  #edc2d4,#e1b4cd, #f1bfd5);
 
 color: rgb(200, 158, 178);
 border: solid 0.1px;
