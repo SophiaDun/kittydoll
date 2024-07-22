@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Use HashRouter
 import Navbar from './components/navbar';
 import Eyes from './components/Eyes';
@@ -17,6 +17,8 @@ import Clothes from './components/Clothes.jsx';
 import { skins, eyesMap, eyeIconsMap, eyeshadows, eyeshadowIcons, lips, lipIcons, hairMap, blushes, blushesIcons, eyebrows, eyebrowIcons, clothes, accessories, background } from './Images.jsx';
 
 function App() {
+
+  
   const [selectedSkin, setSelectedSkin] = useState(skins[0]);
   const [selectedEye, setSelectedEye] = useState(eyesMap.darkBrownEyes[0]);
   const [selectedEyeshadow, setSelectedEyeshadow] = useState(eyeshadows[1]);
@@ -27,6 +29,20 @@ function App() {
   const [selectedCloth, setSelectedCloth] = useState(clothes[0]);
   const [selectedAcc, setSelectedAcc] = useState(accessories[20]);
   const [selectedBg, setSelectedBg] = useState(background[0]);
+
+
+
+
+function preloadImages(imageUrls) {
+  imageUrls.forEach(url => {
+    const img = new Image();
+    img.src = url;
+  });
+}
+
+useEffect(() => {
+  preloadImages([selectedBg, selectedSkin, selectedEyeshadow, selectedEye, selectedLip, selectedEyebrow, selectedBlush, selectedCloth, selectedHair, selectedAcc]);
+}, []);
 
   return (
     <Router>
@@ -49,6 +65,7 @@ function App() {
             </div>
 
             <Navbar />
+            <SaveButton />
             <Routes>
               <Route path="/" element={<Navigate to="/selection" />} />
               <Route path="/selection" element={<Selection skins={skins} onSkinSelected={setSelectedSkin} />} />
@@ -64,7 +81,7 @@ function App() {
             </Routes>
           </div>
         </div>
-        <SaveButton />
+       
 
         <footer className="footer">
           <p className='kittydoll-logo-footer'>kittysophie.art 2024</p>
