@@ -53,10 +53,10 @@ export default function SaveButton() {
       </button>
 
       {imageUrl && (
-        <div className="fullscreen-preview" style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0,0,0,0.8)', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div ref={previewRef} className="preview-content" style={{ position: 'relative', maxWidth: '90%', maxHeight: '90%' }}>
-            <img src={imageUrl} alt="Doll Preview" style={{ maxWidth: '100%', maxHeight: '100%' }} />
-            <p style={{ color: 'white', textAlign: 'center' }}>Long-press/right-click the image to save to your gallery.</p>
+        <div className="fullscreen-preview" >
+          <div ref={previewRef} className="preview-content" >
+            <img src={imageUrl} alt="Doll Preview"  />
+            <p >Long-press/right-click the image to save to your gallery.</p>
           </div>
         </div>
       )}
