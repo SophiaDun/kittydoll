@@ -2,23 +2,23 @@ import  { useState } from 'react';
 
 
 export default function Hair({ hairMap, onHairSelected }) {
-  const [selectedColor, setSelectedHairColor] = useState('blackHair'); //default color to black hair
-  const [selectedHairIndex, setSelectedHairIndex] = useState(null); // Track the index of the selected hair
+  const [selectedColor, setSelectedHairColor] = useState('blackHair'); 
+  const [selectedHairIndex, setSelectedHairIndex] = useState(null); 
 
   const handleHairClick = (hair, index) => {
-    setSelectedHairIndex(index); // Update the selected hair index
+    setSelectedHairIndex(index); 
     onHairSelected(hair);
   };
 
   const handleHairColorClick = (color) => {
     setSelectedHairColor(color);
-    // Update the selected hair to match the new color
+
     const newHair = getSelectedHair(color);
     if (selectedHairIndex !== null && selectedHairIndex < newHair.length) {
-      // Maintain selected hair index if it's within the range of available hair for the new color
+
       onHairSelected(newHair[selectedHairIndex]);
     } else {
-      // If selected hair index is out of range, select the first hair of the new color
+     
       setSelectedHairIndex(0);
       onHairSelected(newHair[0]);
     }
@@ -49,13 +49,13 @@ export default function Hair({ hairMap, onHairSelected }) {
       case 'lilacHair':
         return hairMap.lilac;
       default:
-        return hairMap.black; // Default to black hair
+        return hairMap.black; 
     }
   };
 
   const hairs = getSelectedHair(selectedColor);
 
-  // Chunk the hairs array into arrays of three items each
+
   const rows = [];
   for (let i = 0; i < hairs.length; i += 3) {
     rows.push(hairs.slice(i, i + 3));

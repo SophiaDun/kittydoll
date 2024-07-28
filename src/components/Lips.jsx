@@ -18,7 +18,7 @@ export default function Lips({ lips, onLipSelected, lipIcons }) {
           {row.map((lip, index) => (
             <li key={index}>
               <button className='selection-icon' onClick={() => handleLipClick(lip)}>
-                <img className="icon" src={lipIcons[rowIndex * 3 + index]} alt={`lip-icon-${index + 1}`} loading="lazy" />
+                <img className="icon" src={lipIcons[rowIndex * 3 + index]} alt="lips"loading="lazy" />
               </button>
             </li>
           ))}
