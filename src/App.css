@@ -17,24 +17,20 @@
   font-size: 0.7em;
   font-style: normal;
 
-  color: #ffffff;
-
-
-}
-
-h1 {
-  text-shadow: 1px 1px 7px rgb(222, 123, 174);
-}
-
-@keyframes gradientAnimation {
+   color: #ffffff;
+ 
+ 
+ }
+ h1{
+  text-shadow: 1px 1px 7px rgb(222, 123, 174); 
+ }
+ @keyframes gradientAnimation {
   0% {
     background-position: 50% 0%;
   }
-
   50% {
     background-position: 50% 100%;
   }
-
   100% {
     background-position: 50% 0%;
   }
@@ -59,16 +55,16 @@ h1 {
 
   overflow-x: scroll;
   max-width: 100%;
-  height: 22vh;
+  height: 22vh; 
 }
 
-ul {
+ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.selection-grid {
+.selection-grid{
 
   margin-top: 1vh;
 
@@ -76,9 +72,8 @@ ul {
   max-width: 100%;
   height: 30vh;
 }
-
-.selection-row {
-
+.selection-row{
+  
   display: flex;
   flex-wrap: row;
   justify-content: center;
@@ -89,164 +84,81 @@ ul {
 }
 
 
-.eye-nav-frame,
-.hair-nav-frame {
-  padding: 2%;
+.eye-nav-frame, .hair-nav-frame{
+padding:  2%;
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction:row;
+  justify-content:space-around;
   align-items: center;
   overflow-x: scroll;
 
 
 }
-
-.darkbrown {
-  background-color: rgb(43, 36, 33);
-}
-
-.lightbrown {
-  background-color: rgb(107, 84, 54);
-}
-
-.hazel {
-  background-color: rgb(117, 114, 58);
-}
-
-.green {
-  background-color: rgb(154, 198, 126);
-}
-
-.blue {
-  background-color: rgb(54, 103, 138);
-}
-
-.lightblue {
-  background-color: rgb(157, 184, 211);
-}
-
-.lilac {
-  background-color: rgb(176, 131, 201);
-}
-
-.pink {
-  background-color: rgb(208, 117, 175);
-}
-
-.red {
-  background-color: rgb(167, 43, 43);
-}
-
-.darkbrown,
-.lightbrown,
-.hazel,
-.green,
-.blue,
-.lightblue,
-.lilac,
-.pink,
-.red {
+.darkbrown{background-color: rgb(43, 36, 33);}
+.lightbrown{background-color: rgb(107, 84, 54);}
+.hazel{background-color: rgb(117, 114, 58);} 
+.green{background-color: rgb(154, 198, 126);}
+.blue{background-color: rgb(54, 103, 138);}
+.lightblue{background-color: rgb(157, 184, 211);}
+.lilac{background-color: rgb(176, 131, 201);}
+.pink{background-color: rgb(208, 117, 175);}
+.red{background-color: rgb(167, 43, 43);}
+.darkbrown ,.lightbrown,.hazel,.green,.blue,.lightblue,.lilac,.pink,.red{
   padding: 1.7vh;
   max-width: 100%;
   max-height: 100%;
   border-radius: 30%;
-  border: 0.5px solid;
+  border: 0.5px solid ;
   color: #636363;
 
 
 }
-
-.blackHair {
-  background-color: rgb(43, 36, 33);
-}
-
-.brownHair {
-  background-color: rgb(75, 63, 44);
-}
-
-.orangeHair {
-  background-color: rgb(173, 108, 17);
-}
-
-.blondeHair {
-  background-color: rgb(219, 202, 135);
-}
-
-.whiteHair {
-  background-color: rgb(220, 220, 220);
-}
-
-.redHair {
-  background-color: rgb(145, 30, 30);
-}
-
-.pinkHair {
-  background-color: rgb(206, 116, 161);
-}
-
-.greenHair {
-  background-color: rgb(107, 140, 49);
-}
-
-.blueHair {
-  background-color: rgb(47, 64, 130);
-}
-
-.lightblueHair {
-  background-color: rgb(112, 146, 200);
-}
-
-.lilacHair {
-  background: linear-gradient(180deg, #ba88b8, #d4a1dd);
-}
-
-.blackHair,
-.brownHair,
-.orangeHair,
-.blondeHair,
-.whiteHair,
-.redHair,
-.pinkHair,
-.greenHair,
-.blueHair,
-.lightblueHair,
-.lilacHair {
+.blackHair{background-color: rgb(43, 36, 33);}
+.brownHair{background-color: rgb(75, 63, 44);}
+.orangeHair{background-color: rgb(173, 108, 17);} 
+.blondeHair{background-color: rgb(219, 202, 135);}
+.whiteHair{background-color: rgb(220, 220, 220);}
+.redHair{background-color: rgb(145, 30, 30);}
+.pinkHair{background-color: rgb(206, 116, 161);}
+.greenHair{background-color: rgb(107, 140, 49);}
+.blueHair{background-color: rgb(47, 64, 130);}
+.lightblueHair{background-color: rgb(112, 146, 200);}
+.lilacHair{ background: linear-gradient(180deg, #ba88b8, #d4a1dd);}
+.blackHair ,.brownHair,.orangeHair,.blondeHair,.whiteHair,.redHair,.pinkHair,.greenHair,.blueHair,.lightblueHair,.lilacHair{
   padding: 1.7vh;
   max-width: 100%;
   max-height: 100%;
   border-radius: 30%;
-  border: 0.5px solid;
+  border: 0.5px solid ;
   color: #636363;
 
 }
 
 .nav-logo {
-  width: 100%;
-  height: 100%;
+width: 100%;
+height: 100%;
 
 
 }
-
-.nav-button {
+.nav-button{
   width: 100%;
-  height: 100%;
-  border-bottom-left-radius: 20%;
-  border-bottom-right-radius: 20%;
+height: 100%;
+border-bottom-left-radius: 20%;
+border-bottom-right-radius: 20%;
 
-  text-decoration: none;
+text-decoration: none;
 
-  background-image: linear-gradient(to bottom, #fadbff, #ffd1ea, #edc2d4, #e1b4cd, #f1bfd5);
+background-image: linear-gradient(to bottom, #fadbff, #ffd1ea,  #edc2d4,#e1b4cd, #f1bfd5);
 
-  color: rgb(200, 158, 178);
-  border: solid 0.1px;
-
-
+color: rgb(200, 158, 178);
+border: solid 0.1px;
 
 
+
+ 
 }
-
-.nav-container {
+.nav-container{
 
 
   display: flex;
@@ -254,8 +166,7 @@ ul {
 
 
 }
-
-.doll-frame {
+.doll-frame{
 
   position: relative;
 
@@ -266,7 +177,7 @@ ul {
 
   width: 100%;
   height: auto;
-  z-index: 1;
+  z-index: 1; 
 }
 
 .skin-image {
@@ -289,81 +200,80 @@ ul {
 
 .eye-image {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 4;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto; 
+  z-index: 4; 
 }
-
-.lips {
+.lips{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 3;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto; 
+  z-index: 3; 
 }
-
-.blush {
+.blush{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 3;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto; 
+  z-index: 3; 
 }
-
-.eyebrow {
+.eyebrow{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 3;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto; 
+  z-index: 3; 
 }
-
-.clothes {
+.clothes{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 3;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto; 
+  z-index: 3; 
 }
-
-.hair {
+.hair{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 4;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto; 
+  z-index: 4; 
 }
-
-.accessories {
+.accessories{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 5;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: auto; 
+  z-index: 5; 
 }
-
 .selection-icon {
   position: relative;
   width: 12vh;
-  height: 12vh;
-  margin: 2vh;
+ height: 12vh;
+margin: 2vh;
   background-color: rgb(212, 212, 212);
   border: none;
   border-radius: 10px;
   overflow: hidden;
 }
 
-
-
+.base-icon,
+.cloth-icon,
+.eye-icon,
+.eyeshadow-icon,
+.icon {
+  position: absolute;
+}
 .eye-icon {
+
   top: 0;
   left: 0;
 
@@ -382,14 +292,14 @@ ul {
 
 
 
-img {
-  display: block;
+img{
+display: block;
   max-width: 100%;
 }
 
 .bg {
 
-  display: flex;
+ display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -410,16 +320,8 @@ img {
 .icon {
   top: 0;
   left: 0;
+  border-radius: 10px;
 }
-
-.base-icon,
-.cloth-icon,
-.eye-icon,
-.eyeshadow-icon,
-.icon {
-  position: absolute;
-}
-
 .cloth-icon {
 
   top: 0;
@@ -433,21 +335,20 @@ img {
   top: 0;
   left: 0;
   z-index: 1;
-
+ 
 
 
 }
 
-.save-button {
+.save-button{
 
-  border: none;
-  background: none;
+border: none;
+background: none;
 }
+.save{
 
-.save {
-
-  font-size: 1.5em;
-  font-weight: bold;
+font-size: 1.5em;
+font-weight: bold;
   color: #de94c5;
 }
 
@@ -490,93 +391,89 @@ img {
 
 
 @media (max-width: 431px) {
-
   .selection-icon {
-
+  
     width: 9vh;
     height: 9vh;
-    margin: 1vh;
-
+    margin: 10px;
+  
+  
   }
-
-
   .preview-content {
     position: fixed;
     max-width: 60vw;
-
+  
     background: white;
     border-radius: 8px;
     overflow: hidden;
     padding: 20px;
   }
-
-  .selection-grid {
+  .selection-grid{
 
     margin-top: 1vh;
-
+  
     overflow-x: scroll;
     max-width: 100%;
     height: 30vh;
   }
-
-  .selection-row {
-
+  .selection-row{
+    
     display: flex;
     flex-wrap: row;
     justify-content: center;
     align-items: center;
     max-width: 100%;
-
-
+  
+  
   }
+  
 
-
-  .eye-ul-container {
+   .eye-ul-container{
     padding-top: 1.5vh;
   }
 
-  .kittydoll-logo {
+   .kittydoll-logo {
 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 0.7em;
     font-style: normal;
-
-    color: #ffffff;
-
-
-  }
-
-  h1 {
+  
+     color: #ffffff;
+   
+   
+   }
+   h1{
     padding-bottom: 4px;
-    text-shadow: 1px 1px 7px rgb(222, 123, 174);
-  }
-
+    text-shadow: 1px 1px 7px rgb(222, 123, 174); 
+   }
   .nav-container {
-    max-width: 80vw;
-    overflow-x: auto;
-    white-space: nowrap;
+    max-width: 80vw; 
+    overflow-x:auto;
+    white-space: nowrap; 
   }
-
+  
   .nav-button {
-    width: 10vw;
-    height: 9vw;
+    width: 12vw; 
+    height: 4.5vh; 
 
   }
-
+  
   .nav-logo {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; 
+    height: auto; 
   }
-
+  
   .bg {
-    height: auto;
-    padding-bottom: 1vh;
+    height: auto; 
+    padding-bottom: 1vh; 
   }
-
+  
   .gradient-border {
-    max-width: 80vw;
-    padding: 3vw;
+    max-width: 80vw; 
+    padding: 3vw; 
   }
 }
+
+
