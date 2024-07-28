@@ -76,7 +76,7 @@ export default function SaveButton() {
       <br />
       <button className="save-button" onClick={handleSaveClick}>
         <div style={{ display: 'inline-block', position: 'relative' }}>
-          <HeartFilled style={{ fontSize: '3em', color: '#e5e5e5' }} />
+          <HeartFilled style={{ fontSize: '3.5em', color: '#e5e5e5' }} />
           <span style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', color: 'white' }}>
             <DownloadOutlined className="save" />
           </span>
@@ -86,8 +86,10 @@ export default function SaveButton() {
       {imageUrl && (
         <div className="fullscreen-preview">
           <div ref={previewRef} className="preview-content">
+           
             <img src={imageUrl} alt="Doll Preview" />
-            <p>Long-press/right-click this image to download creation</p>
+            
+            <p>To download your creation long-press or right-click the image above to access the save option.</p>
           </div>
         </div>
       )}

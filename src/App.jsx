@@ -19,14 +19,14 @@ import { skins, eyesMap, eyeIconsMap, eyeshadows, eyeshadowIcons, lips, lipIcons
 function App() {
 
   
-  const [selectedSkin, setSelectedSkin] = useState(skins[0]);
+  const [selectedSkin, setSelectedSkin] = useState(skins[4]);
   const [selectedEye, setSelectedEye] = useState(eyesMap.darkBrownEyes[0]);
-  const [selectedEyeshadow, setSelectedEyeshadow] = useState(eyeshadows[1]);
+  const [selectedEyeshadow, setSelectedEyeshadow] = useState(eyeshadows[0]);
   const [selectedLip, setSelectedLip] = useState(lips[0]);
   const [selectedHair, setSelectedHair] = useState(hairMap.black[0]);
-  const [selectedEyebrow, setSelectedEyebrow] = useState(eyebrows[2]);
-  const [selectedBlush, setSelectedBlush] = useState(blushes[0]);
-  const [selectedCloth, setSelectedCloth] = useState(clothes[0]);
+  const [selectedEyebrow, setSelectedEyebrow] = useState(eyebrows[6]);
+  const [selectedBlush, setSelectedBlush] = useState(blushes[8]);
+  const [selectedCloth, setSelectedCloth] = useState(clothes[11]);
   const [selectedAcc, setSelectedAcc] = useState(accessories[20]);
   const [selectedBg, setSelectedBg] = useState(background[0]);
 
