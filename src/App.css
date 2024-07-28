@@ -393,8 +393,8 @@ font-weight: bold;
 @media (max-width: 431px) {
   .selection-icon {
   
-    width: 9vh;
-    height: 9vh;
+    width: 12vh;
+    height: 12vh;
     margin: 10px;
   
   
@@ -413,7 +413,7 @@ font-weight: bold;
     margin-top: 1vh;
   
     overflow-x: scroll;
-    max-width: 100%;
+    max-width: 100vh;
     height: 30vh;
   }
   .selection-row{
