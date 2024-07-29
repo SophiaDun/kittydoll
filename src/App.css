@@ -8,34 +8,6 @@
 
 }
 
-
-
-.kittydoll-logo {
-  margin: 0.8vh;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  font-size: 0.7em;
-  font-style: normal;
-
-   color: #ffffff;
- 
- 
- }
- h1{
-  text-shadow: 1px 1px 7px rgb(222, 123, 174); 
- }
- @keyframes gradientAnimation {
-  0% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 50% 100%;
-  }
-  100% {
-    background-position: 50% 0%;
-  }
-}
-
 .gradient-border {
   border-radius: 30px;
   padding-bottom: 1.3%;
@@ -48,32 +20,164 @@
   animation: gradientAnimation 6s ease infinite;
 }
 
+.kittydoll-logo {
+  margin: 0.8vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 0.7em;
+  font-style: normal;
+
+  color: #ffffff;
 
 
-
-.selection-display {
-
-  overflow-x: scroll;
-  max-width: 100%;
-  height: 22vh; 
 }
 
-ul{
+h1 {
+  text-shadow: 1px 1px 7px rgb(222, 123, 174);
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 50% 0%;
+  }
+
+  50% {
+    background-position: 50% 100%;
+  }
+
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.bg {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-height: 80vh;
+  max-width: 50vh;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #e5e5e5;
+
+}
+
+
+
+
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.selection-grid{
+
+/* DOLL-FRAME */
+
+.doll-frame {
+  position: relative;
+  
+  }
+  
+  .background {
+  
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+  
+  .skin-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
+  
+
+  .eyebrow,  .blush ,.eyeshadow,.lips,.clothes  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 3;
+  }
+  
+
+  .hair,.eye-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 4;
+  }
+  
+  .accessories {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+  }
+  
+
+/* NAV */
+
+.nav-button {
+ 
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+
+  text-decoration: none;
+
+  background-image: linear-gradient(to bottom, #fadbff, #ffd1ea, #edc2d4, #e1b4cd, #f1bfd5);
+
+  color: rgb(200, 158, 178);
+  border: solid 0.1px;
+
+
+
+
+}
+
+.nav-container {
+
+
+  display: flex;
+
+  flex-direction: row;
+
+
+}
+
+
+
+
+
+/* SELECTION-GRID */
+.selection-grid {
 
   margin-top: 1vh;
-
   overflow-x: scroll;
   max-width: 100%;
   height: 30vh;
 }
-.selection-row{
-  
+
+.selection-row {
+
   display: flex;
   flex-wrap: row;
   justify-content: center;
@@ -84,181 +188,149 @@ ul{
 }
 
 
-.eye-nav-frame, .hair-nav-frame{
-padding:  2%;
+.eye-nav-frame,
+.hair-nav-frame {
+
+
+  padding: 2%;
 
   display: flex;
-  flex-direction:row;
-  justify-content:space-around;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   overflow-x: scroll;
 
 
 }
-.darkbrown{background-color: rgb(43, 36, 33);}
-.lightbrown{background-color: rgb(107, 84, 54);}
-.hazel{background-color: rgb(117, 114, 58);} 
-.green{background-color: rgb(154, 198, 126);}
-.blue{background-color: rgb(54, 103, 138);}
-.lightblue{background-color: rgb(157, 184, 211);}
-.lilac{background-color: rgb(176, 131, 201);}
-.pink{background-color: rgb(208, 117, 175);}
-.red{background-color: rgb(167, 43, 43);}
-.darkbrown ,.lightbrown,.hazel,.green,.blue,.lightblue,.lilac,.pink,.red{
+
+.darkbrown {
+  background-color: rgb(43, 36, 33);
+}
+
+.lightbrown {
+  background-color: rgb(107, 84, 54);
+}
+
+.hazel {
+  background-color: rgb(117, 114, 58);
+}
+
+.green {
+  background-color: rgb(154, 198, 126);
+}
+
+.blue {
+  background-color: rgb(54, 103, 138);
+}
+
+.lightblue {
+  background-color: rgb(157, 184, 211);
+}
+
+.lilac {
+  background-color: rgb(176, 131, 201);
+}
+
+.pink {
+  background-color: rgb(208, 117, 175);
+}
+
+.red {
+  background-color: rgb(167, 43, 43);
+}
+
+.darkbrown,
+.lightbrown,
+.hazel,
+.green,
+.blue,
+.lightblue,
+.lilac,
+.pink,
+.red {
   padding: 1.7vh;
-  max-width: 100%;
-  max-height: 100%;
+
   border-radius: 30%;
-  border: 0.5px solid ;
+  border: 0.5px solid;
   color: #636363;
 
 
 }
-.blackHair{background-color: rgb(43, 36, 33);}
-.brownHair{background-color: rgb(75, 63, 44);}
-.orangeHair{background-color: rgb(173, 108, 17);} 
-.blondeHair{background-color: rgb(219, 202, 135);}
-.whiteHair{background-color: rgb(220, 220, 220);}
-.redHair{background-color: rgb(145, 30, 30);}
-.pinkHair{background-color: rgb(206, 116, 161);}
-.greenHair{background-color: rgb(107, 140, 49);}
-.blueHair{background-color: rgb(47, 64, 130);}
-.lightblueHair{background-color: rgb(112, 146, 200);}
-.lilacHair{ background: linear-gradient(180deg, #ba88b8, #d4a1dd);}
-.blackHair ,.brownHair,.orangeHair,.blondeHair,.whiteHair,.redHair,.pinkHair,.greenHair,.blueHair,.lightblueHair,.lilacHair{
+
+.blackHair {
+  background-color: rgb(43, 36, 33);
+}
+
+.brownHair {
+  background-color: rgb(75, 63, 44);
+}
+
+.orangeHair {
+  background-color: rgb(173, 108, 17);
+}
+
+.blondeHair {
+  background-color: rgb(219, 202, 135);
+}
+
+.whiteHair {
+  background-color: rgb(220, 220, 220);
+}
+
+.redHair {
+  background-color: rgb(145, 30, 30);
+}
+
+.pinkHair {
+  background-color: rgb(206, 116, 161);
+}
+
+.greenHair {
+  background-color: rgb(107, 140, 49);
+}
+
+.blueHair {
+  background-color: rgb(47, 64, 130);
+}
+
+.lightblueHair {
+  background-color: rgb(112, 146, 200);
+}
+
+.lilacHair {
+  background: linear-gradient(180deg, #ba88b8, #d4a1dd);
+}
+
+.blackHair,
+.brownHair,
+.orangeHair,
+.blondeHair,
+.whiteHair,
+.redHair,
+.pinkHair,
+.greenHair,
+.blueHair,
+.lightblueHair,
+.lilacHair {
   padding: 1.7vh;
-  max-width: 100%;
-  max-height: 100%;
+
   border-radius: 30%;
-  border: 0.5px solid ;
+  border: 0.5px solid;
   color: #636363;
 
 }
 
-.nav-logo {
-width: 100%;
-height: 100%;
-
-
-}
-.nav-button{
-  width: 100%;
-height: 100%;
-border-bottom-left-radius: 20%;
-border-bottom-right-radius: 20%;
-
-text-decoration: none;
-
-background-image: linear-gradient(to bottom, #fadbff, #ffd1ea,  #edc2d4,#e1b4cd, #f1bfd5);
-
-color: rgb(200, 158, 178);
-border: solid 0.1px;
 
 
 
- 
-}
-.nav-container{
 
+/* SELECTION-ICONS */
 
-  display: flex;
-  flex-direction: row;
-
-
-}
-.doll-frame{
-
-  position: relative;
-
-
-}
-
-.background {
-
-  width: 100%;
-  height: auto;
-  z-index: 1; 
-}
-
-.skin-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 2;
-}
-
-.eyeshadow {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 3;
-}
-
-.eye-image {
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: auto; 
-  z-index: 4; 
-}
-.lips{
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: auto; 
-  z-index: 3; 
-}
-.blush{
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: auto; 
-  z-index: 3; 
-}
-.eyebrow{
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: auto; 
-  z-index: 3; 
-}
-.clothes{
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: auto; 
-  z-index: 3; 
-}
-.hair{
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: auto; 
-  z-index: 4; 
-}
-.accessories{
-  position: absolute;
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: auto; 
-  z-index: 5; 
-}
 .selection-icon {
   position: relative;
   width: 12vh;
- height: 12vh;
-margin: 2vh;
+  height: 12vh;
+  margin: 2vh;
   background-color: rgb(212, 212, 212);
   border: none;
   border-radius: 10px;
@@ -272,61 +344,26 @@ margin: 2vh;
 .icon {
   position: absolute;
 }
+
 .eye-icon {
 
   top: 0;
   left: 0;
-
   z-index: 3;
 }
 
 
-.eyeshadow-icon {
-  top: 0;
-  left: 0;
-  z-index: 2;
-
-
-}
-
-
-
-
-img{
-display: block;
-  max-width: 100%;
-}
-
-.bg {
-
- display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  max-height: 80vh;
-  max-width: 50vh;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  background-color: #e5e5e5;
-
-}
-
-.footer {
-  font-size: x-small;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-}
 
 .icon {
   top: 0;
   left: 0;
   border-radius: 10px;
 }
-.cloth-icon {
+
+.cloth-icon,.eyeshadow-icon  {
 
   top: 0;
   left: 0;
-
   z-index: 2;
 }
 
@@ -335,20 +372,23 @@ display: block;
   top: 0;
   left: 0;
   z-index: 1;
- 
+
 
 
 }
 
-.save-button{
+/* SAVE-BUTTON */
 
-border: none;
-background: none;
+.save-button {
+
+  border: none;
+  background: none;
 }
-.save{
 
-font-size: 1.5em;
-font-weight: bold;
+.save {
+
+  font-size: 1.5em;
+  font-weight: bold;
   color: #de94c5;
 }
 
@@ -387,93 +427,128 @@ font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* FOOTER */
+
+.footer {
+  font-size: x-small;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
 
 
+/* MOBILE */
 
 @media (max-width: 431px) {
   .selection-icon {
-  
+
     width: 19vw;
     height: 19vw;
     margin: 10px;
-  
-  
+
+
   }
+
   .preview-content {
     position: fixed;
     max-width: 60vw;
-  
+
     background: white;
     border-radius: 8px;
     overflow: hidden;
     padding: 20px;
   }
-  .selection-grid{
 
-    margin-top: 1vh;
-  
-    overflow-x: scroll;
-    max-width: 100vh;
-    height: 30vh;
+  .selection-grid {
+
+    width: 100vh;
+
   }
-  .selection-row{
-    
+
+  .selection-row {
+
     display: flex;
     flex-wrap: row;
     justify-content: center;
     align-items: center;
     max-width: 100%;
-  
-  
-  }
-  
 
-   .eye-ul-container{
-    padding-top: 1.5vh;
+
   }
 
-   .kittydoll-logo {
+
+
+
+  .kittydoll-logo {
 
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     font-size: 0.7em;
     font-style: normal;
-  
-     color: #ffffff;
-   
-   
-   }
-   h1{
-    padding-bottom: 4px;
-    text-shadow: 1px 1px 7px rgb(222, 123, 174); 
-   }
-  .nav-container {
-    max-width: 80vw; 
-    overflow-x:auto;
-    white-space: nowrap; 
-  }
-  
-  .nav-button {
-    width: 12vw; 
-    height: 4.5vh; 
+
+    color: #ffffff;
+
 
   }
-  
+
+  h1 {
+    padding-bottom: 4px;
+    text-shadow: 1px 1px 7px rgb(222, 123, 174);
+  }
+
+  .nav-container {
+    max-width: 80vw;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .nav-button {
+    width: 12vw;
+    height: 10vw;
+
+  }
+
   .nav-logo {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%;
+    height: auto;
   }
-  
+
+  .blackHair,
+  .brownHair,
+  .orangeHair,
+  .blondeHair,
+  .whiteHair,
+  .redHair,
+  .pinkHair,
+  .greenHair,
+  .blueHair,
+  .lightblueHair,
+  .lilacHair {
+    padding: 1.4vh;
+  }
+
+  .darkbrown,
+  .lightbrown,
+  .hazel,
+  .green,
+  .blue,
+  .lightblue,
+  .lilac,
+  .pink,
+  .red {
+    padding: 1.4vh;
+
+
+
+  }
+
   .bg {
-    height: auto; 
-    padding-bottom: 1vh; 
+    height: auto;
+    padding-bottom: 1vh;
   }
-  
+
   .gradient-border {
-    max-width: 80vw; 
-    padding: 3vw; 
+    max-width: 80vw;
+    padding: 3vw;
   }
 }
-
-
