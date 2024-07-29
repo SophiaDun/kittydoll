@@ -85,82 +85,75 @@ ul {
 
 .doll-frame {
   position: relative;
-  
-  }
-  
-  .background {
-  
-    width: 100%;
-    height: auto;
-    z-index: 1;
-  }
-  
-  .skin-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 2;
-  }
-  
 
-  .eyebrow,  .blush ,.eyeshadow,.lips,.clothes  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 3;
-  }
-  
+}
 
-  .hair,.eye-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 4;
-  }
-  
-  .accessories {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 5;
-  }
-  
+.background {
+
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.skin-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+
+.eyebrow,
+.blush,
+.eyeshadow,
+.lips,
+.clothes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+}
+
+
+.hair,
+.eye-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 4;
+}
+
+.accessories {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+}
+
 
 /* NAV */
 
 .nav-button {
- 
+
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
-
   text-decoration: none;
-
   background-image: linear-gradient(to bottom, #fadbff, #ffd1ea, #edc2d4, #e1b4cd, #f1bfd5);
-
   color: rgb(200, 158, 178);
   border: solid 0.1px;
-
-
-
-
 }
 
 .nav-container {
-
-
   display: flex;
-
   flex-direction: row;
-
-
 }
 
 
@@ -313,15 +306,11 @@ ul {
 .lightblueHair,
 .lilacHair {
   padding: 1.7vh;
-
   border-radius: 30%;
   border: 0.5px solid;
   color: #636363;
 
 }
-
-
-
 
 
 /* SELECTION-ICONS */
@@ -346,7 +335,6 @@ ul {
 }
 
 .eye-icon {
-
   top: 0;
   left: 0;
   z-index: 3;
@@ -360,7 +348,8 @@ ul {
   border-radius: 10px;
 }
 
-.cloth-icon,.eyeshadow-icon  {
+.cloth-icon,
+.eyeshadow-icon {
 
   top: 0;
   left: 0;
@@ -372,9 +361,6 @@ ul {
   top: 0;
   left: 0;
   z-index: 1;
-
-
-
 }
 
 /* SAVE-BUTTON */
@@ -444,14 +430,11 @@ ul {
     width: 19vw;
     height: 19vw;
     margin: 10px;
-
-
-  }
+    }
 
   .preview-content {
     position: fixed;
     max-width: 60vw;
-
     background: white;
     border-radius: 8px;
     overflow: hidden;
@@ -471,9 +454,7 @@ ul {
     justify-content: center;
     align-items: center;
     max-width: 100%;
-
-
-  }
+    }
 
 
 
@@ -485,11 +466,8 @@ ul {
     font-weight: 800;
     font-size: 0.7em;
     font-style: normal;
-
     color: #ffffff;
-
-
-  }
+}
 
   h1 {
     padding-bottom: 4px;
@@ -504,7 +482,7 @@ ul {
 
   .nav-button {
     width: 12vw;
-    height: 10vw;
+    height: 9vw;
 
   }
 
@@ -537,10 +515,7 @@ ul {
   .pink,
   .red {
     padding: 1.4vh;
-
-
-
-  }
+}
 
   .bg {
     height: auto;
