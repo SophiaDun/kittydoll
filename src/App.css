@@ -53,8 +53,9 @@ h1 {
 
 
 img {
+  width: 100%;
+  height: auto;
   display: block;
-  max-width: 100%;
 }
 
 .bg {
@@ -143,6 +144,7 @@ ul {
 
 .nav-button {
 
+  height: 4vh;
   border-bottom-left-radius: 20%;
   border-bottom-right-radius: 20%;
   text-decoration: none;
@@ -152,6 +154,7 @@ ul {
 }
 
 .nav-container {
+
   display: flex;
   flex-direction: row;
 }
@@ -424,6 +427,9 @@ ul {
 
 /* MOBILE */
 
+
+
+
 @media (max-width: 431px) {
   .selection-icon {
 
@@ -486,10 +492,7 @@ ul {
 
   }
 
-  .nav-logo {
-    max-width: 100%;
-    height: auto;
-  }
+
 
   .blackHair,
   .brownHair,

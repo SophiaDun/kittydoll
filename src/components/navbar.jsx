@@ -22,45 +22,45 @@ export default function Navbar() {
        <nav>
       <ul className='nav-container'>
       <li >
-        <button className='nav-button'><Link to="/selection"><img className="nav-logo"src={SkinIcon} alt="nav-logo" /></Link></button>
+        <button className='nav-button'><Link to="/selection"><img src={SkinIcon} alt="nav-logo" /></Link></button>
           
         </li>
         <li>
-            <button className='nav-button'> <Link to="/eyes"><img className="nav-logo"src={EyeIcon} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/eyes"><img src={EyeIcon} alt="nav-logo" /></Link></button>
          
         </li>
         <li>
-            <button className='nav-button'> <Link to="/eyeshadows"><img className="nav-logo"src={EyeshadowIcon} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/eyeshadows"><img src={EyeshadowIcon} alt="nav-logo" /></Link></button>
          
         </li>
         <li>
-            <button className='nav-button'> <Link to="/lips"><img className="nav-logo"src={LipsIcon} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/lips"><img src={LipsIcon} alt="nav-logo" /></Link></button>
          
         </li>
        
         <li>
-            <button className='nav-button'> <Link to="/hair"><img className="nav-logo"src={HairIcon} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/hair"><img src={HairIcon} alt="nav-logo" /></Link></button>
          
         </li>
         <li>
-            <button className='nav-button'> <Link to="/eyebrows"><img className="nav-logo"src={EyebrowIcon} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/eyebrows"><img src={EyebrowIcon} alt="nav-logo" /></Link></button>
          
         </li>
         <li>
-            <button className='nav-button'> <Link to="/blush"><img className="nav-logo"src={BlushIcon} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/blush"><img src={BlushIcon} alt="nav-logo" /></Link></button>
          
         </li>
         <li>
-            <button className='nav-button'> <Link to="/clothes"><img className="nav-logo"src={ClothesIcon} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/clothes"><img src={ClothesIcon} alt="nav-logo" /></Link></button>
          
         </li>
         <li>
-            <button className='nav-button'> <Link to="/accessories"><img className="nav-logo"src={AccessoriesIcon} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/accessories"><img src={AccessoriesIcon} alt="nav-logo" /></Link></button>
          
         </li>
 
         <li>
-            <button className='nav-button'> <Link to="/background"><img className="nav-logo"src={Background} alt="nav-logo" /></Link></button>
+            <button className='nav-button'> <Link to="/background"><img src={Background} alt="nav-logo" /></Link></button>
          
         </li>
 
