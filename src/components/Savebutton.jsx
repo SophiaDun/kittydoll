@@ -85,11 +85,13 @@ export default function SaveButton() {
 
       {imageUrl && (
         <div className="fullscreen-preview">
+
           <div ref={previewRef} className="preview-content">
-           
+         
             <img src={imageUrl} alt="Doll Preview" />
             
             <p>To download your creation long-press or right-click the image above to access the save option.</p>
+            <HeartFilled style={{ fontSize: '1.3em', color: '#efb0dc' }} />
           </div>
         </div>
       )}
