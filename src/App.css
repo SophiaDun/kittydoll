@@ -77,9 +77,11 @@ img {
 
 
 ul {
+  
   list-style-type: none;
   margin: 0;
   padding: 0;
+
 }
 
 
@@ -87,6 +89,7 @@ ul {
 
 .doll-frame {
   position: relative;
+
 
 }
 
@@ -529,3 +532,4 @@ ul {
     padding: 3vw;
   }
 }
+
