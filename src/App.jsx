@@ -14,7 +14,9 @@ import Background from './components/Background.jsx';
 import Accessories from './components/Accessories.jsx';
 import Clothes from './components/Clothes.jsx';
 import kittysophie_watermark from './assets/images/tab-icons/watermark.png';
-import { skins, eyesMap, eyeIconsMap, eyeshadows, eyeshadowIcons, lips, lipIcons, hairMap, blushes, blushesIcons, eyebrows, eyebrowIcons, clothes, accessories, background } from './Images.jsx';
+
+import { skins, eyesMap, eyeIconsMap, eyeshadows, eyeshadowIcons, lips, lipIcons, hairMap, blushes, 
+blushesIcons, eyebrows, eyebrowIcons, clothes, accessories, background } from './Images.jsx';
 
 function App() {
 
@@ -33,14 +35,17 @@ function App() {
 
   
   return (
+    
     <Router>
       <div className="container">
+        
         <div className="gradient-border">
+          
           <h1 className='kittydoll-logo'>K I T T Y D O L L</h1>
 
           <div className="bg">
+            
             <div className='doll-frame'>
-             
               <img className="background" src={selectedBg} alt="background" crossOrigin="anonymous"/>
               <img className="skin-image" src={selectedSkin} alt="base" crossOrigin="anonymous"/>
               <img className="eyeshadow" src={selectedEyeshadow} alt="eyeshadow" crossOrigin="anonymous"/>
@@ -55,6 +60,7 @@ function App() {
             </div>
 
             <Navbar />
+            
             <Routes>
               <Route path="/" element={<Navigate to="/selection" />} />
               <Route path="/selection" element={<Selection skins={skins} onSkinSelected={setSelectedSkin} />} />
@@ -70,12 +76,14 @@ function App() {
             </Routes>
           </div>
         </div>
+        
         <SaveButton />
 
         <footer className="footer">
           <p className='kittydoll-logo-footer'>kittysophie.art 2024</p>
         </footer>
-      </div>
+        </div>
+      
     </Router>
   );
 }
